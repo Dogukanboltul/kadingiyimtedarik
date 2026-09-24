@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <main className="bg-[#f4f1eb] text-[#171817]">
 
-      <div className="bg-[#202a30] text-white">
+      <div className="bg-[#eeeae3] text-[#202a30]">
         <div className="mx-auto flex max-w-[1500px] items-center justify-center px-6 py-2.5 md:justify-between md:px-10">
           <div className="hidden items-center gap-2 md:flex">
             <span className="h-2 w-2 rounded-full bg-emerald-400"></span>
-            <span className="text-[10px] font-bold tracking-[.18em] text-white/55">
+            <span className="text-[10px] font-bold tracking-[.18em] text-black/50">
               AKTİF TEDARİK
             </span>
           </div>
@@ -28,35 +28,35 @@ export default function Home() {
             AYNI GÜN KARGO
           </div>
 
-          <div className="hidden text-[10px] font-bold tracking-[.16em] text-white/55 md:block">
+          <div className="hidden text-[10px] font-bold tracking-[.16em] text-black/50 md:block">
             TÜRKİYE & KIBRIS
           </div>
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#344149]/95 text-white backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-black/10 bg-white/95 text-[#202a30] backdrop-blur-xl">
         <div className="mx-auto flex h-[82px] max-w-[1500px] items-center justify-between px-6 md:px-10">
 
-          <a href="#" className="border-r border-white/20 pr-8">
+          <a href="#" className="border-r border-black/15 pr-8">
             <div className="text-[21px] font-light tracking-[.14em]">
               KADIN GİYİM
             </div>
-            <div className="mt-1 text-[9px] font-bold tracking-[.32em] text-white/50">
+            <div className="mt-1 text-[9px] font-bold tracking-[.32em] text-black/45">
               TEDARİK
             </div>
           </a>
 
-          <nav className="hidden items-center gap-10 text-[12px] font-semibold text-white/75 lg:flex">
-            <a href="#tedarik" className="transition hover:text-white">
+          <nav className="hidden items-center gap-10 text-[12px] font-semibold text-black/65 lg:flex">
+            <a href="#tedarik" className="transition hover:text-black">
               TEDARİK
             </a>
-            <a href="#koleksiyon" className="transition hover:text-white">
+            <a href="#koleksiyon" className="transition hover:text-black">
               ÜRÜN GRUPLARI
             </a>
-            <a href="#sistem" className="transition hover:text-white">
+            <a href="#sistem" className="transition hover:text-black">
               NASIL ÇALIŞIR?
             </a>
-            <a href="#hakkimizda" className="transition hover:text-white">
+            <a href="#hakkimizda" className="transition hover:text-black">
               HAKKIMIZDA
             </a>
           </nav>
@@ -65,7 +65,7 @@ export default function Home() {
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-white/70 px-5 py-3 text-[10px] font-bold tracking-[.13em] transition hover:bg-white hover:text-[#344149] md:px-7"
+            className="border border-[#202a30]/50 px-5 py-3 text-[10px] font-bold tracking-[.13em] transition hover:bg-white hover:text-[#344149] md:px-7"
           >
             ÜRÜN TALEBİ →
           </a>
@@ -106,7 +106,7 @@ export default function Home() {
               Çözüm Ortağı
             </h1>
 
-            <p className="mt-7 max-w-[600px] text-[15px] font-medium leading-7 text-white/75 md:text-[17px]">
+            <p className="mt-7 max-w-[600px] text-[15px] font-medium leading-7 text-black/65 md:text-[17px]">
               Butik, mağaza ve online satıcılar için İstanbul tekstil
               piyasasından ürün araştırma ve tedarik hizmeti.
               Aradığınız modeli bize gönderin, sizin için araştıralım.
@@ -299,7 +299,7 @@ export default function Home() {
                     </h3>
                   </div>
 
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/70 text-lg transition group-hover:bg-white group-hover:text-black">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#202a30]/50 text-lg transition group-hover:bg-white group-hover:text-black">
                     ↗
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sistem" className="bg-[#344149] px-6 py-24 text-white md:px-10 md:py-32">
+      <section id="sistem" className="bg-[#e6e0d7] px-6 py-24 text-[#202a30] md:px-10 md:py-32">
         <div className="mx-auto max-w-[1500px]">
 
           <div className="text-[10px] font-bold tracking-[.2em] text-[#d4b477]">
@@ -325,7 +325,7 @@ export default function Home() {
             Gerisini biz araştıralım.
           </h2>
 
-          <div className="mt-16 grid border-y border-white/20 md:grid-cols-3">
+          <div className="mt-16 grid border-y border-black/15 md:grid-cols-3">
             {[
               ["01", "ÜRÜNÜ GÖNDER", "Aradığınız modelin fotoğrafını veya ekran görüntüsünü WhatsApp üzerinden iletin."],
               ["02", "BİZ ARAŞTIRALIM", "Talebinize uygun ürünü İstanbul tekstil piyasasında araştırıp seçenekleri size iletelim."],
@@ -333,7 +333,7 @@ export default function Home() {
             ].map(([n, title, text]) => (
               <div
                 key={n}
-                className="border-b border-white/20 py-9 md:border-b-0 md:border-r md:px-9 md:first:pl-0 md:last:border-r-0"
+                className="border-b border-black/15 py-9 md:border-b-0 md:border-r md:border-black/15 md:px-9 md:first:pl-0 md:last:border-r-0"
               >
                 <div className="text-[11px] font-bold tracking-[.18em] text-[#d4b477]">
                   {n}
@@ -343,7 +343,7 @@ export default function Home() {
                   {title}
                 </h3>
 
-                <p className="mt-4 max-w-[360px] text-[14px] leading-7 text-white/55">
+                <p className="mt-4 max-w-[360px] text-[14px] leading-7 text-black/50">
                   {text}
                 </p>
               </div>
@@ -391,7 +391,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#111514] px-6 py-24 text-center text-white md:px-10 md:py-32">
+      <section className="bg-[#ded7cc] px-6 py-24 text-center text-[#202a30] md:px-10 md:py-32">
         <div className="mx-auto max-w-[1000px]">
           <div className="text-[10px] font-bold tracking-[.22em] text-[#d4b477]">
             WHATSAPP TEDARİK HATTI
@@ -406,7 +406,7 @@ export default function Home() {
             bulamadınız mı?
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[550px] text-[15px] leading-7 text-white/55">
+          <p className="mx-auto mt-6 max-w-[550px] text-[15px] leading-7 text-black/50">
             Fotoğrafını gönderin. İstanbul tekstil piyasasında sizin için
             araştıralım.
           </p>
@@ -415,25 +415,25 @@ export default function Home() {
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-9 inline-block border border-white bg-white px-9 py-5 text-[11px] font-black tracking-[.15em] text-[#111514] transition hover:bg-transparent hover:text-white"
+            className="mt-9 inline-block border border-white bg-white px-9 py-5 text-[11px] font-black tracking-[.15em] text-[#111514] transition hover:bg-transparent hover:text-black"
           >
             WHATSAPP&apos;TAN GÖNDER →
           </a>
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#111514] px-6 py-10 text-white md:px-10">
+      <footer className="border-t border-black/10 bg-[#f4f1eb] px-6 py-10 text-[#202a30] md:px-10">
         <div className="mx-auto flex max-w-[1500px] flex-col justify-between gap-6 md:flex-row md:items-center">
           <div>
             <div className="text-[16px] tracking-[.15em]">
               KADIN GİYİM TEDARİK
             </div>
-            <div className="mt-2 text-[9px] font-bold tracking-[.2em] text-white/35">
+            <div className="mt-2 text-[9px] font-bold tracking-[.2em] text-black/35">
               ROTA TEDARİK • İSTANBUL
             </div>
           </div>
 
-          <div className="text-[11px] tracking-[.1em] text-white/45">
+          <div className="text-[11px] tracking-[.1em] text-black/45">
             0532 497 53 61
           </div>
         </div>
