@@ -5,12 +5,12 @@ const photoWhatsapp =
   "https://wa.me/905324975361?text=Merhaba%2C%20arad%C4%B1%C4%9F%C4%B1m%20kad%C4%B1n%20giyim%20%C3%BCr%C3%BCn%C3%BCn%C3%BCn%20foto%C4%9Fraf%C4%B1n%C4%B1%20g%C3%B6ndermek%20istiyorum.";
 
 const categories = [
-  ["ELBİSE", "Günlük, özel gün ve yeni sezon modeller"],
-  ["TAKIM", "Butiklere yönelik kadın takım seçenekleri"],
-  ["CEKET", "Sezonluk ve klasik kadın ceket modelleri"],
-  ["PANTOLON", "Farklı kesim ve kumaş seçenekleri"],
-  ["GÖMLEK", "Güncel kadın gömlek koleksiyonları"],
-  ["TRİKO", "Kazak, hırka ve sezonluk triko ürünleri"],
+  ["ELBİSE", "Günlük, özel gün ve yeni sezon modeller", "/images/elbise.jpeg"],
+  ["TAKIM", "Butiklere yönelik kadın takım seçenekleri", "/images/takim.jpeg"],
+  ["CEKET", "Sezonluk ve klasik kadın ceket modelleri", "/images/ceket.jpeg"],
+  ["PANTOLON", "Farklı kesim ve kumaş seçenekleri", "/images/pantolon.jpeg"],
+  ["GÖMLEK", "Güncel kadın gömlek koleksiyonları", "/images/gomlek.jpeg"],
+  ["TRİKO", "Kazak, hırka ve sezonluk triko ürünleri", "/images/triko.jpeg"],
 ];
 
 export default function Home() {
@@ -193,26 +193,51 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-          {categories.map(([title, text], index) => (
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+          {categories.map(([title, text, image], index) => (
             <a
               key={title}
               href={photoWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="group min-h-[220px] rounded-2xl border border-slate-200 p-7 transition hover:-translate-y-1 hover:border-[#3157d5] hover:shadow-xl"
+              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-[#3157d5] hover:shadow-2xl"
             >
-              <div className="flex items-start justify-between">
-                <span className="text-xs font-bold text-slate-300">
+              <div className="relative h-[310px] overflow-hidden bg-slate-100">
+                <img
+                  src={image}
+                  alt={`${title} kadın giyim tedarik`}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+
+                <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-2 text-[11px] font-black backdrop-blur">
                   0{index + 1}
-                </span>
-                <span className="text-xl text-slate-300 transition group-hover:text-[#3157d5]">
+                </div>
+
+                <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#3157d5] shadow">
                   ↗
-                </span>
+                </div>
+
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
 
-              <h3 className="mt-14 text-2xl font-black">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-500">{text}</p>
+              <div className="p-6">
+                <h3 className="text-2xl font-black tracking-[-0.03em]">
+                  {title}
+                </h3>
+
+                <p className="mt-2 min-h-[48px] text-sm leading-6 text-slate-500">
+                  {text}
+                </p>
+
+                <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                  <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#3157d5]">
+                    ÜRÜN SOR
+                  </span>
+                  <span className="text-sm text-slate-400">
+                    WhatsApp →
+                  </span>
+                </div>
+              </div>
             </a>
           ))}
         </div>
