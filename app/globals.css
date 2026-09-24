@@ -78,3 +78,28 @@ body {
   z-index: 10;
 }
 
+
+/* HERO SAĞ PANEL - TEMİZ YERLEŞİM */
+#tedarik .lg\:block {
+  min-height: 540px !important;
+}
+
+#tedarik .lg\:block > div:nth-child(1) {
+  left: 0 !important;
+  top: 40px !important;
+  width: 46% !important;
+  height: 460px !important;
+}
+
+#tedarik .lg\:block > div:nth-child(2) {
+  right: 0 !important;
+  top: 95px !important;
+  width: 51% !important;
+  z-index: 20 !important;
+}
+
+/* Alttaki üst üste binen üçüncü fotoğrafı kaldır */
+#tedarik .lg\:block > div:nth-child(3) {
+  display: none !important;
+}
+
