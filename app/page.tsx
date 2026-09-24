@@ -100,57 +100,128 @@ export default function Home() {
 
           {/* HERO PANEL */}
           <div className="relative">
-            <div className="premium-shadow rounded-[2rem] border border-white/10 bg-[#101828] p-6 md:p-8">
-              <div className="flex items-center justify-between border-b border-white/10 pb-5">
+            <div className="premium-shadow overflow-hidden rounded-[2rem] bg-[#101828] p-5 text-white md:p-6">
+
+              <div className="flex items-start justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
-                    ÜRÜN BULMA SERVİSİ
-                  </p>
-                  <p className="mt-2 text-xl font-bold text-white">
-                    Ne arıyorsunuz?
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-60"></span>
+                      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span>
+                    </span>
+
+                    <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/45">
+                      TEDARİK MASASI
+                    </p>
+                  </div>
+
+                  <h2 className="mt-3 text-2xl font-black tracking-[-0.04em]">
+                    Bugün aranan ürünler
+                  </h2>
                 </div>
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#3157d5] text-xl">
-                  ↗
+                <div className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-[10px] font-bold text-white/60">
+                  İSTANBUL
                 </div>
               </div>
 
-              <div className="mt-6 space-y-3">
+              <div className="mt-6 grid grid-cols-3 gap-2.5">
                 {[
-                  "Kadın elbise",
-                  "Kadın takım",
-                  "Ceket & pantolon",
-                  "Gömlek & bluz",
-                ].map((item) => (
+                  ["/images/elbise.jpeg", "Elbise"],
+                  ["/images/takim.jpeg", "Takım"],
+                  ["/images/ceket.jpeg", "Ceket"],
+                ].map(([image, name]) => (
                   <a
-                    key={item}
+                    key={name}
                     href={photoWhatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between rounded-xl bg-white/5 px-5 py-4 text-white transition hover:bg-white/10"
+                    className="group relative aspect-[3/4] overflow-hidden rounded-[1.1rem] bg-white/5"
                   >
-                    <span>{item}</span>
-                    <span className="text-white/35">→</span>
+                    <img
+                      src={image}
+                      alt={`${name} kadın giyim tedarik`}
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+
+                    <span className="absolute bottom-3 left-3 text-xs font-bold">
+                      {name}
+                    </span>
                   </a>
                 ))}
+              </div>
+
+              <div className="mt-5 rounded-[1.25rem] border border-white/10 bg-white/[0.045] p-5">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/35">
+                      NASIL ÇALIŞIR?
+                    </p>
+
+                    <p className="mt-2 max-w-[280px] text-sm font-semibold leading-6 text-white/90">
+                      Ürünün fotoğrafını gönder, İstanbul tekstil
+                      piyasasında senin için araştıralım.
+                    </p>
+                  </div>
+
+                  <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3157d5] text-lg sm:flex">
+                    ↗
+                  </div>
+                </div>
               </div>
 
               <a
                 href={photoWhatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 flex w-full items-center justify-center rounded-xl bg-white px-5 py-4 text-sm font-bold text-[#101828]"
+                className="mt-3 flex items-center justify-between rounded-[1.15rem] bg-white px-5 py-4 text-[#101828] transition hover:bg-[#f2f5ff]"
               >
-                Farklı Bir Ürün Sor →
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#3157d5]">
+                    WHATSAPP
+                  </p>
+                  <p className="mt-1 text-sm font-black">
+                    Aradığın ürünü gönder
+                  </p>
+                </div>
+
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3157d5] font-bold text-white">
+                  →
+                </span>
               </a>
+
+              <div className="mt-5 flex items-center justify-between border-t border-white/10 pt-5">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.15em] text-white/30">
+                    HİZMET
+                  </p>
+                  <p className="mt-1 text-xs font-semibold text-white/70">
+                    Butik • Mağaza • Online Satıcı
+                  </p>
+                </div>
+
+                <div className="text-right">
+                  <p className="text-[10px] uppercase tracking-[0.15em] text-white/30">
+                    İLETİŞİM
+                  </p>
+                  <p className="mt-1 text-xs font-bold">
+                    0532 497 53 61
+                  </p>
+                </div>
+              </div>
+
             </div>
 
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-5 shadow-xl md:block">
-              <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                İLETİŞİM
+            <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-xl md:block">
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">
+                GÖNDERİM
               </p>
-              <p className="mt-2 font-black">0532 497 53 61</p>
+
+              <p className="mt-1 text-sm font-black text-[#101828]">
+                Türkiye & Kıbrıs
+              </p>
             </div>
           </div>
         </div>
