@@ -154,37 +154,75 @@ export default function Home() {
               </div>
 
               <div className="py-7">
-                <div className="text-[10px] font-bold tracking-[.14em] text-black/45">
-                  SÜREÇ
+                <div className="text-[10px] font-bold tracking-[.18em] text-black/45">
+                  HIZLI TEDARİK SİSTEMİ
                 </div>
 
                 <div
-                  className="mt-2 text-[33px] leading-none"
+                  className="mt-3 text-[38px] leading-[1.02]"
                   style={{ fontFamily: "Georgia, Times New Roman, serif" }}
                 >
                   Aynı Gün
+                  <br />
+                  Tedarik & Kargo
                 </div>
 
-                <div className="mt-2 text-[13px] font-bold">
-                  TEDARİK & KARGO
+                <p className="mt-5 max-w-[330px] text-[12px] font-medium leading-6 text-black/55">
+                  Aradığınız kadın giyim ürününün fotoğrafını gönderin.
+                  İstanbul tekstil piyasasında sizin için araştıralım,
+                  siparişinizi hazırlayalım ve kargo sürecini organize edelim.
+                </p>
+
+                <div className="mt-6 grid grid-cols-3 border-y border-black/15 py-4 text-center">
+                  <div className="border-r border-black/15">
+                    <div className="text-[9px] font-bold tracking-[.14em] text-black/40">HİZMET</div>
+                    <div className="mt-1 text-[10px] font-black">B2B TEDARİK</div>
+                  </div>
+                  <div className="border-r border-black/15">
+                    <div className="text-[9px] font-bold tracking-[.14em] text-black/40">BÖLGE</div>
+                    <div className="mt-1 text-[10px] font-black">TÜRKİYE</div>
+                  </div>
+                  <div>
+                    <div className="text-[9px] font-bold tracking-[.14em] text-black/40">GÖNDERİM</div>
+                    <div className="mt-1 text-[10px] font-black">TR & KIBRIS</div>
+                  </div>
                 </div>
               </div>
 
-              <div className="space-y-3 border-t border-black/15 pt-5 text-[11px] font-semibold">
-                <div className="flex justify-between">
-                  <span className="text-black/50">01</span>
-                  <span>ÜRÜNÜ GÖNDER</span>
+              <div>
+                <div className="space-y-3 text-[11px] font-semibold">
+                  <div className="flex items-center justify-between border-b border-black/10 pb-3">
+                    <span className="font-bold text-black/35">01</span>
+                    <span>ÜRÜN FOTOĞRAFINI GÖNDER</span>
+                  </div>
+
+                  <div className="flex items-center justify-between border-b border-black/10 pb-3">
+                    <span className="font-bold text-black/35">02</span>
+                    <span>BİZ ARAŞTIRALIM</span>
+                  </div>
+
+                  <div className="flex items-center justify-between pb-3">
+                    <span className="font-bold text-black/35">03</span>
+                    <span>SİPARİŞİ KARGOYA VERELİM</span>
+                  </div>
                 </div>
 
-                <div className="flex justify-between">
-                  <span className="text-black/50">02</span>
-                  <span>BİZ ARAŞTIRALIM</span>
-                </div>
-
-                <div className="flex justify-between">
-                  <span className="text-black/50">03</span>
-                  <span>KARGOYA VERELİM</span>
-                </div>
+                <a
+                  href={whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 flex items-center justify-between bg-[#26343b] px-5 py-4 text-white transition hover:bg-[#172126]"
+                >
+                  <div>
+                    <div className="text-[8px] font-bold tracking-[.18em] text-white/50">
+                      TEDARİK HATTI
+                    </div>
+                    <div className="mt-1 text-[10px] font-black tracking-[.08em]">
+                      WHATSAPP&apos;TAN ÜRÜN GÖNDER
+                    </div>
+                  </div>
+                  <span className="text-lg">→</span>
+                </a>
               </div>
             </div>
 
