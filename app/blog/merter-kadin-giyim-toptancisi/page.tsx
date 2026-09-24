@@ -155,7 +155,23 @@ export default function Page() {
             Kadın Giyim Tedarikçisi →
           </Link>
         </div>
-      </article>
+      
+        <div className="mx-auto mt-12 max-w-4xl border border-black/10 bg-white p-7">
+          <p className="text-xs font-bold tracking-[.18em] text-black/40">
+            MERTER TOPTAN TEDARİK
+          </p>
+          <p className="mt-3 leading-7 text-black/65">
+            Merterde toptan ürün tedariği hakkında detaylı bilgi ve ürün
+            grupları için ana rehberimizi inceleyebilirsiniz.
+          </p>
+          <Link
+            href="/merter-toptan"
+            className="mt-5 inline-block font-semibold underline underline-offset-4"
+          >
+            Merter Toptan →
+          </Link>
+        </div>
+</article>
     </main>
   );
 }
