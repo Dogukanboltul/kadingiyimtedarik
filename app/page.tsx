@@ -18,6 +18,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-[#101828]">
 
       {/* HEADER */}
+      <div className="bg-[#3157d5] px-4 py-2.5 text-center text-[11px] font-black tracking-[0.18em] text-white md:text-xs">AYNI GÜN TEDARİK <span className="mx-2 text-white/40">•</span> AYNI GÜN KARGO</div>
       <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-10">
           <div>
