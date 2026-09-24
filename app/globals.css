@@ -103,3 +103,32 @@ body {
   display: none !important;
 }
 
+
+/* HERO - FOTOĞRAF VE OPERASYON KARTINI EŞİTLE */
+#tedarik .lg\:block > div:nth-child(1),
+#tedarik .lg\:block > div:nth-child(2) {
+  top: 20px !important;
+  height: 500px !important;
+  bottom: auto !important;
+}
+
+#tedarik .lg\:block > div:nth-child(1) {
+  left: 0 !important;
+  width: 47% !important;
+}
+
+#tedarik .lg\:block > div:nth-child(2) {
+  right: 0 !important;
+  width: 49% !important;
+  padding: 34px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+#tedarik .lg\:block > div:nth-child(1) img {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
