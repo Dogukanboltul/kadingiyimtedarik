@@ -477,6 +477,47 @@ export default function Home() {
         </div>
       </footer>
 
-    </main>
+    
+      <section className="border-t border-black/10 bg-[#f4f1eb]">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_.65fr]">
+            <div>
+              <p className="text-xs font-bold tracking-[.22em] text-black/40">
+                İSTANBUL • MERTER • B2B TEDARİK
+              </p>
+
+              <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight md:text-5xl">
+                Merter Toptan Kadın Giyim Tedariği
+              </h2>
+
+              <p className="mt-5 max-w-2xl text-base leading-7 text-black/60">
+                Merterden toptan kadın giyim ürünü arayan butik ve mağazalar
+                için ürün tedarik desteği. Yeni sezon modellerden ceket, takım,
+                bluz, triko ve dış giyime kadar ürün taleplerinizi bize
+                iletebilirsiniz.
+              </p>
+
+              <Link
+                href="/merter-toptan"
+                className="mt-7 inline-block bg-[#202a30] px-7 py-4 text-sm font-bold text-white"
+              >
+                MERTER TOPTAN →
+              </Link>
+            </div>
+
+            <div className="border-l border-black/10 pl-8">
+              <p className="font-serif text-3xl">
+                Merterden ürün bulun.
+              </p>
+              <p className="mt-3 leading-7 text-black/55">
+                Ürün görselini gönderin, tedarik seçeneklerini araştıralım ve
+                siparişinizin gönderim sürecini organize edelim.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</main>
   );
 }
