@@ -5,12 +5,12 @@ const photoWhatsapp =
   "https://wa.me/905324975361?text=Merhaba%2C%20arad%C4%B1%C4%9F%C4%B1m%20kad%C4%B1n%20giyim%20%C3%BCr%C3%BCn%C3%BCn%C3%BCn%20foto%C4%9Fraf%C4%B1n%C4%B1%20g%C3%B6ndermek%20istiyorum.";
 
 const categories = [
-  ["ELBİSE", "Günlük, özel gün ve yeni sezon modeller", "/images/elbise.jpeg"],
-  ["TAKIM", "Butiklere yönelik kadın takım seçenekleri", "/images/takim.jpeg"],
-  ["CEKET", "Sezonluk ve klasik kadın ceket modelleri", "/images/ceket.jpeg"],
-  ["PANTOLON", "Farklı kesim ve kumaş seçenekleri", "/images/pantolon.jpeg"],
-  ["GÖMLEK", "Güncel kadın gömlek koleksiyonları", "/images/gomlek.jpeg"],
-  ["TRİKO", "Kazak, hırka ve sezonluk triko ürünleri", "/images/triko.jpeg"],
+  ["ELBİSE", "Günlük, özel gün ve yeni sezon modeller", "/images/bisou.jpeg"],
+  ["TAKIM", "Butiklere yönelik kadın takım seçenekleri", "/images/toptankadingiyimmodel.jpeg"],
+  ["CEKET", "Sezonluk ve klasik kadın ceket modelleri", "/images/toptanceket.jpeg"],
+  ["PANTOLON", "Farklı kesim ve kumaş seçenekleri", "/images/model.jpeg"],
+  ["GÖMLEK", "Güncel kadın gömlek koleksiyonları", "/images/merterkoleksiyon.jpeg"],
+  ["TRİKO", "Kazak, hırka ve sezonluk triko ürünleri", "/images/kadinkazak.jpeg"],
 ];
 
 export default function Home() {
@@ -127,9 +127,9 @@ export default function Home() {
 
               <div className="mt-6 grid grid-cols-3 gap-2.5">
                 {[
-                  ["/images/elbise.jpeg", "Elbise"],
-                  ["/images/takim.jpeg", "Takım"],
-                  ["/images/ceket.jpeg", "Ceket"],
+                  ["/images/bisou.jpeg", "Elbise"],
+                  ["/images/toptankadingiyimmodel.jpeg", "Takım"],
+                  ["/images/toptanceket.jpeg", "Ceket"],
                 ].map(([image, name]) => (
                   <a
                     key={name}
