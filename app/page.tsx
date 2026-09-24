@@ -1,3 +1,4 @@
+import Link from "next/link";
 const whatsapp = "https://wa.me/905324975361?text=Merhaba%2C%20kad%C4%B1n%20giyim%20%C3%BCr%C3%BCn%C3%BC%20tedarik%20etmek%20istiyorum.";
 
 const products = [
