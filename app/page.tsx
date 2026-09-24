@@ -18,10 +18,10 @@ export default function Home() {
     <main className="min-h-screen bg-white text-[#101828]">
 
       {/* HEADER */}
-      <header className="border-b border-slate-200 bg-white">
+      <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-10">
           <div>
-            <div className="text-xl font-black tracking-[-0.04em] md:text-2xl">
+            <div className="text-xl font-black tracking-[-0.05em] md:text-2xl">
               KADIN GİYİM
               <span className="text-[#3157d5]"> TEDARİK</span>
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#f4f7ff]">
+      <section className="relative overflow-hidden bg-[#f7f8fb]">
         <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-[#dce5ff]" />
         <div className="absolute -bottom-52 left-[35%] h-[420px] w-[420px] rounded-full bg-white" />
 
@@ -59,7 +59,7 @@ export default function Home() {
               İstanbul Kadın Giyim Tedarik Ağı
             </div>
 
-            <h1 className="mt-7 max-w-4xl text-5xl font-black leading-[0.98] tracking-[-0.055em] md:text-7xl">
+            <h1 className="mt-8 max-w-4xl text-5xl font-black leading-[0.94] tracking-[-0.065em] md:text-[82px]">
               Aradığın ürünü
               <br />
               <span className="text-[#3157d5]">biz bulalım.</span>
@@ -100,7 +100,7 @@ export default function Home() {
 
           {/* HERO PANEL */}
           <div className="relative">
-            <div className="rounded-[2rem] bg-[#101828] p-6 shadow-2xl md:p-8">
+            <div className="premium-shadow rounded-[2rem] border border-white/10 bg-[#101828] p-6 md:p-8">
               <div className="flex items-center justify-between border-b border-white/10 pb-5">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
@@ -200,13 +200,13 @@ export default function Home() {
               href={photoWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-[#3157d5] hover:shadow-2xl"
+              className="premium-card group overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-white transition duration-500 hover:-translate-y-1.5 hover:border-slate-300 hover:shadow-2xl"
             >
-              <div className="relative h-[310px] overflow-hidden bg-slate-100">
+              <div className="relative h-[350px] overflow-hidden bg-slate-100">
                 <img
                   src={image}
                   alt={`${title} kadın giyim tedarik`}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.035]"
                 />
 
                 <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-2 text-[11px] font-black backdrop-blur">
@@ -220,8 +220,8 @@ export default function Home() {
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-2xl font-black tracking-[-0.03em]">
+              <div className="p-7">
+                <h3 className="text-2xl font-black tracking-[-0.04em]">
                   {title}
                 </h3>
 
@@ -312,7 +312,7 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="px-5 pb-8 md:px-10">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#3157d5] px-7 py-16 text-white md:px-16 md:py-20">
+        <div className="premium-shadow relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-[#3157d5] px-7 py-16 text-white md:px-16 md:py-24">
           <div className="grid items-end gap-10 md:grid-cols-[1fr_auto]">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">
