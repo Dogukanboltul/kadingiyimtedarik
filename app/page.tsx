@@ -1,453 +1,440 @@
-const whatsapp =
-  "https://wa.me/905324975361?text=Merhaba%2C%20kad%C4%B1n%20giyim%20%C3%BCr%C3%BCn%C3%BC%20tedarik%20etmek%20istiyorum.";
+const whatsapp = "https://wa.me/905324975361?text=Merhaba%2C%20kad%C4%B1n%20giyim%20%C3%BCr%C3%BCn%C3%BC%20tedarik%20etmek%20istiyorum.";
 
-const photoWhatsapp =
-  "https://wa.me/905324975361?text=Merhaba%2C%20arad%C4%B1%C4%9F%C4%B1m%20kad%C4%B1n%20giyim%20%C3%BCr%C3%BCn%C3%BCn%C3%BCn%20foto%C4%9Fraf%C4%B1n%C4%B1%20g%C3%B6ndermek%20istiyorum.";
-
-const categories = [
-  ["BLUZ & ÜST GİYİM", "Yeni sezon kadın bluz ve üst giyim modelleri", "/images/bisou.jpeg"],
-  ["BLUZ & ÜST GİYİM", "Yeni sezon bluz ve kadın üst giyim modelleri", "/images/toptankadingiyimmodel.jpeg"],
-  ["CEKET", "Sezonluk ve klasik kadın ceket modelleri", "/images/toptanceket.jpeg"],
-  ["TAKIM", "Kadın ikili takım ve sezonluk takım modelleri", "/images/model.jpeg"],
-  ["DERİ & CEKET", "Yeni sezon kadın ceket ve deri görünümlü modeller", "/images/merterkoleksiyon.jpeg"],
-  ["SWEATSHIRT & TRİKO", "Sweatshirt, kazak ve sezonluk üst giyim ürünleri", "/images/kadinkazak.jpeg"],
+const products = [
+  ["/images/bisou.jpeg", "Bluz & Üst Giyim"],
+  ["/images/toptankadingiyimmodel.jpeg", "Yeni Sezon"],
+  ["/images/toptanceket.jpeg", "Ceket"],
+  ["/images/model.jpeg", "Kadın Takım"],
+  ["/images/merterkoleksiyon.jpeg", "Dış Giyim"],
+  ["/images/kadinkazak.jpeg", "Triko"],
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-[#101828]">
+    <main className="bg-[#f4f1eb] text-[#171817]">
 
-      {/* HEADER */}
-      <div className="bg-[#0b1220] text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-2.5 md:justify-between md:px-10">
+      <div className="bg-[#202a30] text-white">
+        <div className="mx-auto flex max-w-[1500px] items-center justify-center px-6 py-2.5 md:justify-between md:px-10">
           <div className="hidden items-center gap-2 md:flex">
             <span className="h-2 w-2 rounded-full bg-emerald-400"></span>
-            <span className="text-[10px] font-bold tracking-[0.18em] text-white/55">
+            <span className="text-[10px] font-bold tracking-[.18em] text-white/55">
               AKTİF TEDARİK
             </span>
           </div>
 
-          <div className="flex items-center gap-3 text-[10px] font-black tracking-[0.16em] md:text-[11px]">
-            <span>AYNI GÜN TEDARİK</span>
-            <span className="text-[#6685f5]">→</span>
-            <span>AYNI GÜN KARGO</span>
+          <div className="text-[10px] font-bold tracking-[.18em] md:text-[11px]">
+            AYNI GÜN TEDARİK
+            <span className="mx-3 text-[#c7a56a]">•</span>
+            AYNI GÜN KARGO
           </div>
 
-          <div className="hidden text-[10px] font-bold tracking-[0.16em] text-white/45 md:block">
+          <div className="hidden text-[10px] font-bold tracking-[.16em] text-white/55 md:block">
             TÜRKİYE & KIBRIS
           </div>
         </div>
       </div>
-      <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-10">
-          <div>
-            <div className="text-xl font-black tracking-[-0.05em] md:text-2xl">
-              KADIN GİYİM
-              <span className="text-[#3157d5]"> TEDARİK</span>
-            </div>
-            <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-              Rota Tedarik
-            </div>
-          </div>
 
-          <div className="hidden items-center gap-8 text-sm font-medium md:flex">
-            <a href="#urunler">Ürün Grupları</a>
-            <a href="#sistem">Nasıl Çalışır?</a>
-            <a href="#hakkimizda">Hakkımızda</a>
-          </div>
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#344149]/95 text-white backdrop-blur-xl">
+        <div className="mx-auto flex h-[82px] max-w-[1500px] items-center justify-between px-6 md:px-10">
+
+          <a href="#" className="border-r border-white/20 pr-8">
+            <div className="text-[21px] font-light tracking-[.14em]">
+              KADIN GİYİM
+            </div>
+            <div className="mt-1 text-[9px] font-bold tracking-[.32em] text-white/50">
+              TEDARİK
+            </div>
+          </a>
+
+          <nav className="hidden items-center gap-10 text-[12px] font-semibold text-white/75 lg:flex">
+            <a href="#tedarik" className="transition hover:text-white">
+              TEDARİK
+            </a>
+            <a href="#koleksiyon" className="transition hover:text-white">
+              ÜRÜN GRUPLARI
+            </a>
+            <a href="#sistem" className="transition hover:text-white">
+              NASIL ÇALIŞIR?
+            </a>
+            <a href="#hakkimizda" className="transition hover:text-white">
+              HAKKIMIZDA
+            </a>
+          </nav>
 
           <a
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-xl bg-[#101828] px-5 py-3 text-sm font-semibold text-white"
+            className="border border-white/70 px-5 py-3 text-[10px] font-bold tracking-[.13em] transition hover:bg-white hover:text-[#344149] md:px-7"
           >
-            WhatsApp
+            ÜRÜN TALEBİ →
           </a>
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-[#f7f8fb]">
-        <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-[#dce5ff]" />
-        <div className="absolute -bottom-52 left-[35%] h-[420px] w-[420px] rounded-full bg-white" />
+      <section id="tedarik" className="relative min-h-[680px] overflow-hidden bg-[#101312] text-white">
 
-        <div className="relative mx-auto grid min-h-[700px] max-w-7xl items-center gap-16 px-5 py-20 md:grid-cols-[1.1fr_.9fr] md:px-10">
+        <img
+          src="/images/toptankadingiyim.jpeg"
+          alt="Kadın giyim tedarik"
+          className="absolute inset-0 h-full w-full object-cover opacity-50"
+        />
 
-          <div>
-            <div className="inline-flex rounded-full border border-[#3157d5]/20 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-[#3157d5]">
-              İstanbul Kadın Giyim Tedarik Ağı
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/15"></div>
+
+        <div className="relative mx-auto grid min-h-[680px] max-w-[1500px] items-center gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1fr_.9fr]">
+
+          <div className="max-w-[720px]">
+            <div className="mb-7 flex items-center gap-3">
+              <div className="h-px w-12 bg-[#d4b477]"></div>
+              <span className="text-[10px] font-bold tracking-[.24em] text-white/65">
+                İSTANBUL • KADIN GİYİM • B2B TEDARİK
+              </span>
             </div>
 
-            <h1 className="mt-8 max-w-4xl text-5xl font-black leading-[0.94] tracking-[-0.065em] md:text-[82px]">
-              Aradığın ürünü
+            <h1
+              className="max-w-[700px] text-[48px] font-normal leading-[1.03] tracking-[-.045em] md:text-[68px] lg:text-[76px]"
+              style={{ fontFamily: "Georgia, Times New Roman, serif" }}
+            >
+              Kadın Giyim
               <br />
-              <span className="text-[#3157d5]">biz bulalım.</span>
+              Tedariğinin
+              <br />
+              Profesyonel
+              <br />
+              Çözüm Ortağı
             </h1>
 
-            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600">
-              Butik, mağaza ve online satıcılar için kadın giyim ürün
-              tedariği. Aradığınız modelin fotoğrafını gönderin,
-              İstanbul tekstil piyasasında sizin için araştıralım.
+            <p className="mt-7 max-w-[600px] text-[15px] font-medium leading-7 text-white/75 md:text-[17px]">
+              Butik, mağaza ve online satıcılar için İstanbul tekstil
+              piyasasından ürün araştırma ve tedarik hizmeti.
+              Aradığınız modeli bize gönderin, sizin için araştıralım.
             </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={photoWhatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl bg-[#3157d5] px-7 py-4 text-center text-sm font-bold text-white shadow-lg shadow-blue-200"
-              >
-                📷 Ürün Fotoğrafı Gönder
-              </a>
-
+            <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href={whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl border border-slate-300 bg-white px-7 py-4 text-center text-sm font-bold"
+                className="border border-white bg-[#596972]/80 px-7 py-4 text-[11px] font-bold tracking-[.13em] backdrop-blur transition hover:bg-white hover:text-[#202a30]"
               >
-                WhatsApp'tan Yaz
+                WHATSAPP&apos;TAN ÜRÜN GÖNDER
               </a>
-            </div>
-
-            <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-500">
-              <span>✓ Butiklere özel</span>
-              <span>✓ Türkiye geneli</span>
-              <span>✓ Kıbrıs gönderimi</span>
-            </div>
-          </div>
-
-          {/* HERO PANEL */}
-          <div className="relative">
-            <div className="premium-shadow overflow-hidden rounded-[2rem] bg-[#101828] p-5 text-white md:p-6">
-
-              <div className="flex items-start justify-between">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="relative flex h-2.5 w-2.5">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-60"></span>
-                      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span>
-                    </span>
-
-                    <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/45">
-                      TEDARİK MASASI
-                    </p>
-                  </div>
-
-                  <h2 className="mt-3 text-2xl font-black tracking-[-0.04em]">
-                    Bugün aranan ürünler
-                  </h2>
-                </div>
-
-                <div className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-[10px] font-bold text-white/60">
-                  İSTANBUL
-                </div>
-              </div>
-
-              <div className="mt-6 grid grid-cols-3 gap-2.5">
-                {[
-                  ["/images/bisou.jpeg", "Elbise"],
-                  ["/images/toptankadingiyimmodel.jpeg", "Takım"],
-                  ["/images/toptanceket.jpeg", "Ceket"],
-                ].map(([image, name]) => (
-                  <a
-                    key={name}
-                    href={photoWhatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative aspect-[3/4] overflow-hidden rounded-[1.1rem] bg-white/5"
-                  >
-                    <img
-                      src={image}
-                      alt={`${name} kadın giyim tedarik`}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-
-                    <span className="absolute bottom-3 left-3 text-xs font-bold">
-                      {name}
-                    </span>
-                  </a>
-                ))}
-              </div>
-
-              <div className="mt-5 rounded-[1.25rem] border border-white/10 bg-white/[0.045] p-5">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/35">
-                      NASIL ÇALIŞIR?
-                    </p>
-
-                    <p className="mt-2 max-w-[280px] text-sm font-semibold leading-6 text-white/90">
-                      Ürünün fotoğrafını gönder, İstanbul tekstil
-                      piyasasında senin için araştıralım.
-                    </p>
-                  </div>
-
-                  <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3157d5] text-lg sm:flex">
-                    ↗
-                  </div>
-                </div>
-              </div>
 
               <a
-                href={photoWhatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 flex items-center justify-between rounded-[1.15rem] bg-white px-5 py-4 text-[#101828] transition hover:bg-[#f2f5ff]"
+                href="#sistem"
+                className="border border-white/25 px-7 py-4 text-[11px] font-bold tracking-[.13em] text-white/80 transition hover:border-white"
               >
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#3157d5]">
-                    WHATSAPP
-                  </p>
-                  <p className="mt-1 text-sm font-black">
-                    Aradığın ürünü gönder
-                  </p>
-                </div>
-
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3157d5] font-bold text-white">
-                  →
-                </span>
+                NASIL ÇALIŞIYOR?
               </a>
+            </div>
+          </div>
 
-              <div className="mt-5 flex items-center justify-between border-t border-white/10 pt-5">
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.15em] text-white/30">
-                    HİZMET
-                  </p>
-                  <p className="mt-1 text-xs font-semibold text-white/70">
-                    Butik • Mağaza • Online Satıcı
-                  </p>
+          <div className="relative hidden min-h-[530px] lg:block">
+
+            <div className="absolute left-[5%] top-[4%] h-[430px] w-[285px] overflow-hidden border border-white/60 bg-black/30 p-2 backdrop-blur-sm">
+              <img
+                src="/images/bisou.jpeg"
+                alt="Kadın giyim ürün tedariği"
+                className="h-full w-full object-cover"
+              />
+
+              <div className="absolute left-5 top-5 bg-[#f4f1eb] px-3 py-2 text-[9px] font-black tracking-[.14em] text-[#202a30]">
+                YENİ SEZON
+              </div>
+            </div>
+
+            <div className="absolute right-[1%] top-[22%] w-[310px] border border-white/30 bg-[#d9d4ca]/95 p-7 text-[#202a30] shadow-2xl">
+              <div className="flex items-center justify-between border-b border-black/15 pb-4">
+                <span className="text-[9px] font-black tracking-[.18em]">
+                  TEDARİK OPERASYONU
+                </span>
+                <span className="h-2 w-2 rounded-full bg-emerald-600"></span>
+              </div>
+
+              <div className="py-7">
+                <div className="text-[10px] font-bold tracking-[.14em] text-black/45">
+                  SÜREÇ
                 </div>
 
-                <div className="text-right">
-                  <p className="text-[10px] uppercase tracking-[0.15em] text-white/30">
-                    İLETİŞİM
-                  </p>
-                  <p className="mt-1 text-xs font-bold">
-                    0532 497 53 61
-                  </p>
+                <div
+                  className="mt-2 text-[33px] leading-none"
+                  style={{ fontFamily: "Georgia, Times New Roman, serif" }}
+                >
+                  Aynı Gün
+                </div>
+
+                <div className="mt-2 text-[13px] font-bold">
+                  TEDARİK & KARGO
                 </div>
               </div>
 
+              <div className="space-y-3 border-t border-black/15 pt-5 text-[11px] font-semibold">
+                <div className="flex justify-between">
+                  <span className="text-black/50">01</span>
+                  <span>ÜRÜNÜ GÖNDER</span>
+                </div>
+
+                <div className="flex justify-between">
+                  <span className="text-black/50">02</span>
+                  <span>BİZ ARAŞTIRALIM</span>
+                </div>
+
+                <div className="flex justify-between">
+                  <span className="text-black/50">03</span>
+                  <span>KARGOYA VERELİM</span>
+                </div>
+              </div>
             </div>
 
-            <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-xl md:block">
-              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">
-                GÖNDERİM
-              </p>
-
-              <p className="mt-1 text-sm font-black text-[#101828]">
-                Türkiye & Kıbrıs
-              </p>
+            <div className="absolute bottom-[1%] right-[20%] w-[210px] overflow-hidden border-[7px] border-[#101312] shadow-2xl">
+              <img
+                src="/images/toptanceket.jpeg"
+                alt="Toptan kadın giyim"
+                className="aspect-[4/3] w-full object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* TRUST STRIP */}
-      <section className="border-y border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 px-5 md:grid-cols-4 md:px-10">
-          {[
-            ["İSTANBUL", "Tekstil piyasası"],
-            ["TÜRKİYE", "Gönderim"],
-            ["KIBRIS", "Ürün tedariği"],
-            ["WHATSAPP", "Hızlı iletişim"],
-          ].map(([a, b]) => (
-            <div key={a} className="px-5 py-7">
-              <p className="text-sm font-black">{a}</p>
-              <p className="mt-1 text-xs text-slate-400">{b}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* CATEGORIES */}
-      <section id="urunler" className="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#3157d5]">
-              ÜRÜN GRUPLARI
-            </p>
-            <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-6xl">
-              Ne arıyorsanız
-              <br />
-              bize gönderin.
-            </h2>
-          </div>
-
-          <p className="max-w-md leading-7 text-slate-500">
-            Belirli bir marka veya tek bir koleksiyonla sınırlı değiliz.
-            Talebinize göre ürün araştırması yapıyoruz.
-          </p>
-        </div>
-
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-          {categories.map(([title, text, image], index) => (
-            <a
-              key={title}
-              href={photoWhatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="premium-card group overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-white transition duration-500 hover:-translate-y-1.5 hover:border-slate-300 hover:shadow-2xl"
-            >
-              <div className="relative h-[350px] overflow-hidden bg-slate-100">
-                <img
-                  src={image}
-                  alt={`${title} kadın giyim tedarik`}
-                  className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.035]"
-                />
-
-                <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-2 text-[11px] font-black backdrop-blur">
-                  0{index + 1}
-                </div>
-
-                <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#3157d5] shadow">
-                  ↗
-                </div>
-
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
-
-              <div className="p-7">
-                <h3 className="text-2xl font-black tracking-[-0.04em]">
-                  {title}
-                </h3>
-
-                <p className="mt-2 min-h-[48px] text-sm leading-6 text-slate-500">
-                  {text}
-                </p>
-
-                <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-                  <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#3157d5]">
-                    ÜRÜN SOR
-                  </span>
-                  <span className="text-sm text-slate-400">
-                    WhatsApp →
-                  </span>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section id="sistem" className="bg-[#101828] text-white">
-        <div className="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#7f9cff]">
-            TEDARİK SİSTEMİ
-          </p>
-
-          <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-[-0.04em] md:text-6xl">
-            3 adımda ürününüzü araştıralım.
+      <section className="border-b border-[#cbc5bb] bg-[#f4f1eb]">
+        <div className="mx-auto max-w-[1500px] px-6 py-9 text-center md:px-10">
+          <h2
+            className="text-[27px] tracking-[-.03em] md:text-[38px]"
+            style={{ fontFamily: "Georgia, Times New Roman, serif" }}
+          >
+            İstanbul tekstil piyasasından Türkiye ve Kıbrıs&apos;a ürün tedariği
           </h2>
+        </div>
 
-          <div className="mt-16 grid gap-px overflow-hidden rounded-3xl bg-white/10 md:grid-cols-3">
+        <div className="border-t border-[#cbc5bb]">
+          <div className="mx-auto grid max-w-[1500px] grid-cols-2 md:grid-cols-4">
             {[
-              [
-                "01",
-                "Fotoğrafı gönder",
-                "Aradığınız modelin fotoğrafını veya ekran görüntüsünü WhatsApp'tan iletin.",
-              ],
-              [
-                "02",
-                "Biz araştıralım",
-                "Talebinize uygun ürünleri İstanbul tekstil piyasasında araştıralım.",
-              ],
-              [
-                "03",
-                "Siparişi hazırlayalım",
-                "Uygun ürünler belirlendiğinde sipariş ve gönderim sürecini planlayalım.",
-              ],
-            ].map(([num, title, text]) => (
-              <div key={num} className="bg-[#101828] p-8 md:p-10">
-                <span className="text-5xl font-black text-white/10">{num}</span>
-                <h3 className="mt-12 text-2xl font-bold">{title}</h3>
-                <p className="mt-4 leading-7 text-white/50">{text}</p>
+              ["01", "AYNI GÜN TEDARİK"],
+              ["02", "AYNI GÜN KARGO"],
+              ["03", "TÜRKİYE GENELİ"],
+              ["04", "KIBRIS GÖNDERİM"],
+            ].map(([n, text]) => (
+              <div
+                key={text}
+                className="border-r border-[#cbc5bb] px-5 py-6 text-center last:border-r-0"
+              >
+                <div className="text-[9px] font-bold tracking-[.15em] text-black/35">
+                  {n}
+                </div>
+                <div className="mt-2 text-[11px] font-black tracking-[.12em]">
+                  {text}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="hakkimizda" className="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
-        <div className="grid gap-14 md:grid-cols-2">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#3157d5]">
-              KADIN GİYİM TEDARİK
-            </p>
+      <section id="koleksiyon" className="bg-[#eeeae3] px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-[1500px]">
 
-            <h2 className="mt-5 text-4xl font-black tracking-[-0.04em] md:text-6xl">
-              Toptancı aramak yerine ürünü arayın.
+          <div className="mb-14 grid gap-8 lg:grid-cols-2">
+            <div>
+              <div className="text-[10px] font-black tracking-[.2em] text-[#7b6c58]">
+                ÜRÜN GRUPLARI
+              </div>
+
+              <h2
+                className="mt-4 max-w-[650px] text-[44px] leading-[1.02] tracking-[-.045em] md:text-[62px]"
+                style={{ fontFamily: "Georgia, Times New Roman, serif" }}
+              >
+                Aradığınız modeli bize gönderin.
+              </h2>
+            </div>
+
+            <div className="flex items-end lg:justify-end">
+              <p className="max-w-[500px] text-[15px] leading-7 text-black/55">
+                Tek bir marka veya koleksiyonla sınırlı değiliz.
+                Talebinize uygun kadın giyim ürünlerini İstanbul tekstil
+                piyasasında araştırıyoruz.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-12">
+            {products.map(([image, title], index) => (
+              <a
+                key={title}
+                href={whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={
+                  "group relative overflow-hidden bg-[#202a30] " +
+                  (index === 0 || index === 5
+                    ? "min-h-[520px] md:col-span-7"
+                    : "min-h-[420px] md:col-span-5")
+                }
+              >
+                <img
+                  src={image}
+                  alt={title}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent"></div>
+
+                <div className="absolute left-6 top-6 border border-white/50 bg-black/20 px-3 py-2 text-[9px] font-bold tracking-[.15em] text-white backdrop-blur">
+                  0{index + 1}
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-7 text-white md:p-9">
+                  <div>
+                    <div className="text-[9px] font-bold tracking-[.18em] text-white/60">
+                      KADIN GİYİM
+                    </div>
+
+                    <h3
+                      className="mt-2 text-[30px] md:text-[38px]"
+                      style={{ fontFamily: "Georgia, Times New Roman, serif" }}
+                    >
+                      {title}
+                    </h3>
+                  </div>
+
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/70 text-lg transition group-hover:bg-white group-hover:text-black">
+                    ↗
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="sistem" className="bg-[#344149] px-6 py-24 text-white md:px-10 md:py-32">
+        <div className="mx-auto max-w-[1500px]">
+
+          <div className="text-[10px] font-bold tracking-[.2em] text-[#d4b477]">
+            TEDARİK SİSTEMİ
+          </div>
+
+          <h2
+            className="mt-5 max-w-[850px] text-[43px] leading-[1.05] tracking-[-.04em] md:text-[64px]"
+            style={{ fontFamily: "Georgia, Times New Roman, serif" }}
+          >
+            Fotoğrafı gönderin.
+            <br />
+            Gerisini biz araştıralım.
+          </h2>
+
+          <div className="mt-16 grid border-y border-white/20 md:grid-cols-3">
+            {[
+              ["01", "ÜRÜNÜ GÖNDER", "Aradığınız modelin fotoğrafını veya ekran görüntüsünü WhatsApp üzerinden iletin."],
+              ["02", "BİZ ARAŞTIRALIM", "Talebinize uygun ürünü İstanbul tekstil piyasasında araştırıp seçenekleri size iletelim."],
+              ["03", "KARGOYA VERELİM", "Siparişinizi organize ederek Türkiye veya Kıbrıs gönderim sürecini başlatalım."],
+            ].map(([n, title, text]) => (
+              <div
+                key={n}
+                className="border-b border-white/20 py-9 md:border-b-0 md:border-r md:px-9 md:first:pl-0 md:last:border-r-0"
+              >
+                <div className="text-[11px] font-bold tracking-[.18em] text-[#d4b477]">
+                  {n}
+                </div>
+
+                <h3 className="mt-10 text-[18px] font-black tracking-[.08em]">
+                  {title}
+                </h3>
+
+                <p className="mt-4 max-w-[360px] text-[14px] leading-7 text-white/55">
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="hakkimizda" className="bg-[#f4f1eb] px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-2">
+
+          <div>
+            <div className="text-[10px] font-black tracking-[.2em] text-[#7b6c58]">
+              ROTA TEDARİK
+            </div>
+
+            <h2
+              className="mt-5 text-[44px] leading-[1.03] tracking-[-.045em] md:text-[62px]"
+              style={{ fontFamily: "Georgia, Times New Roman, serif" }}
+            >
+              Toptancı aramayın.
+              <br />
+              Ürünü arayın.
             </h2>
           </div>
 
-          <div className="space-y-6 text-lg leading-8 text-slate-600">
-            <p>
-              Kadın Giyim Tedarik, butiklerin, mağazaların ve online
-              satıcıların İstanbul tekstil piyasasındaki ürünlere daha
-              kolay ulaşmasına yardımcı olmak amacıyla çalışır.
-            </p>
-
-            <p>
-              Aradığınız ürünü bize iletin. Ürün grubuna ve talebinize
-              göre uygun seçeneklerin araştırılmasını sağlayalım.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="px-5 pb-8 md:px-10">
-        <div className="premium-shadow relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-[#3157d5] px-7 py-16 text-white md:px-16 md:py-24">
-          <div className="grid items-end gap-10 md:grid-cols-[1fr_auto]">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">
-                ÜRÜN BULMA TALEBİ
+          <div className="flex items-end">
+            <div className="max-w-[590px]">
+              <p className="text-[17px] leading-8 text-black/60">
+                Kadın Giyim Tedarik; butik, mağaza ve online satıcıların
+                İstanbul tekstil piyasasındaki ürünlere daha kolay ulaşmasına
+                yardımcı olan ürün araştırma ve tedarik hizmetidir.
               </p>
 
-              <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-[-0.04em] md:text-6xl">
-                Fotoğrafı gönder.
-                <br />
-                Biz araştıralım.
-              </h2>
-
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/70">
-                Butiğiniz için aradığınız ürünü WhatsApp üzerinden
-                gönderin. İstanbul tekstil piyasasında sizin için
-                araştıralım.
-              </p>
+              <a
+                href={whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-block border-b border-black pb-2 text-[11px] font-black tracking-[.15em]"
+              >
+                ÜRÜN TALEBİ OLUŞTUR →
+              </a>
             </div>
-
-            <a
-              href={photoWhatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl bg-white px-8 py-5 text-center text-sm font-black text-[#101828]"
-            >
-              WHATSAPP'TAN GÖNDER →
-            </a>
           </div>
         </div>
       </section>
 
-      <footer className="px-5 py-12 md:px-10">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 border-t border-slate-200 pt-9 md:flex-row">
-          <div>
-            <strong className="text-lg">
-              KADIN GİYİM <span className="text-[#3157d5]">TEDARİK</span>
-            </strong>
-            <p className="mt-2 text-sm text-slate-400">
-              Rota Tedarik • İstanbul
-            </p>
+      <section className="bg-[#111514] px-6 py-24 text-center text-white md:px-10 md:py-32">
+        <div className="mx-auto max-w-[1000px]">
+          <div className="text-[10px] font-bold tracking-[.22em] text-[#d4b477]">
+            WHATSAPP TEDARİK HATTI
           </div>
 
-          <div className="text-sm text-slate-500">
-            WhatsApp: 0532 497 53 61
+          <h2
+            className="mt-6 text-[45px] leading-[1.02] tracking-[-.045em] md:text-[70px]"
+            style={{ fontFamily: "Georgia, Times New Roman, serif" }}
+          >
+            Aradığınız modeli
+            <br />
+            bulamadınız mı?
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-[550px] text-[15px] leading-7 text-white/55">
+            Fotoğrafını gönderin. İstanbul tekstil piyasasında sizin için
+            araştıralım.
+          </p>
+
+          <a
+            href={whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-9 inline-block border border-white bg-white px-9 py-5 text-[11px] font-black tracking-[.15em] text-[#111514] transition hover:bg-transparent hover:text-white"
+          >
+            WHATSAPP&apos;TAN GÖNDER →
+          </a>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 bg-[#111514] px-6 py-10 text-white md:px-10">
+        <div className="mx-auto flex max-w-[1500px] flex-col justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <div className="text-[16px] tracking-[.15em]">
+              KADIN GİYİM TEDARİK
+            </div>
+            <div className="mt-2 text-[9px] font-bold tracking-[.2em] text-white/35">
+              ROTA TEDARİK • İSTANBUL
+            </div>
+          </div>
+
+          <div className="text-[11px] tracking-[.1em] text-white/45">
+            0532 497 53 61
           </div>
         </div>
       </footer>
