@@ -6,11 +6,11 @@ const photoWhatsapp =
 
 const categories = [
   ["ELBİSE", "Günlük, özel gün ve yeni sezon modeller", "/images/bisou.jpeg"],
-  ["TAKIM", "Butiklere yönelik kadın takım seçenekleri", "/images/toptankadingiyimmodel.jpeg"],
+  ["BLUZ & ÜST GİYİM", "Yeni sezon bluz ve kadın üst giyim modelleri", "/images/toptankadingiyimmodel.jpeg"],
   ["CEKET", "Sezonluk ve klasik kadın ceket modelleri", "/images/toptanceket.jpeg"],
-  ["PANTOLON", "Farklı kesim ve kumaş seçenekleri", "/images/model.jpeg"],
-  ["GÖMLEK", "Güncel kadın gömlek koleksiyonları", "/images/merterkoleksiyon.jpeg"],
-  ["TRİKO", "Kazak, hırka ve sezonluk triko ürünleri", "/images/kadinkazak.jpeg"],
+  ["TAKIM", "Kadın ikili takım ve sezonluk takım modelleri", "/images/model.jpeg"],
+  ["DERİ & CEKET", "Yeni sezon kadın ceket ve deri görünümlü modeller", "/images/merterkoleksiyon.jpeg"],
+  ["SWEATSHIRT & TRİKO", "Sweatshirt, kazak ve sezonluk üst giyim ürünleri", "/images/kadinkazak.jpeg"],
 ];
 
 export default function Home() {
