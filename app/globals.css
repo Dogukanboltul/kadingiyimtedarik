@@ -50,3 +50,31 @@ body {
     0 10px 35px rgba(16, 24, 40, 0.04);
 }
 
+
+/* HERO - FORCE LIGHT */
+#tedarik {
+  background: #f4f1eb !important;
+  color: #202a30 !important;
+}
+
+#tedarik > img {
+  opacity: 0.06 !important;
+}
+
+#tedarik > div.absolute.inset-0 {
+  background: transparent !important;
+}
+
+#tedarik h1 {
+  color: #202a30 !important;
+}
+
+#tedarik p {
+  color: #59636a !important;
+}
+
+#tedarik > div.relative {
+  position: relative;
+  z-index: 10;
+}
+
